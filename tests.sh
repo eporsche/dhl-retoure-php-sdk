@@ -1,0 +1,1 @@
+./vendor/bin/phpunit --configuration phpunit.dist.xml --testsuite dhl-php-retoure
