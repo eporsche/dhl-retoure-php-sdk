@@ -26,7 +26,7 @@ class RpPartnerService extends \SoapClient
      */
     public function __construct(array $options = array(), $username, $password, $wsdl = 'https://amsel.dpwn.net/abholportal/gw/lp/schema/1.0/var3ws.wsdl')
     {
-      $defaultOptions = array("classmap"=>self::$classmap,"trace" => true,"exceptions" => true);
+      $defaultOptions = array("classmap"=>self::$classmap,"trace" => true,"exceptions" => true, 'cache_wsdl' => WSDL_CACHE_BOTH);
       $callOptions = array_merge($defaultOptions, $options);
 
       $ns = 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd';
