@@ -7,3 +7,12 @@ This *unofficial* library is wrapping some functions of the DHL SOAP Retoure API
 - You need a retoure portal set up by a DHL employee.
 - PHP-SOAP-Client installed + enabled on your Server. [More information on php.net](http://php.net/manual/en/soap.setup.php)
 
+## Install
+
+```
+composer require mr-jingles/dhl-retoure-php-sdk
+```
+
+## Usage
+
+See Testcase for basic usage. 
