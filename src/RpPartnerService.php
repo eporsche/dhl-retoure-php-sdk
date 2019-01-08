@@ -23,9 +23,14 @@ class RpPartnerService extends \SoapClient
      * @param array $options A array of config values
      * @param string $wsdl The wsdl file to use
      * @access public
+     * Location of wsdl: https://amsel.dpwn.net/abholportal/gw/lp/schema/1.0/var3ws.wsdl
      */
-    public function __construct(array $options = array(), $username, $password, $wsdl = 'https://amsel.dpwn.net/abholportal/gw/lp/schema/1.0/var3ws.wsdl')
+    public function __construct(array $options = array(), $username, $password, $wsdl)
     {
+      if($wsdl == null) 
+      {
+        $wsdl = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'var3ws.wsdl';
+      }
       $defaultOptions = array("classmap"=>self::$classmap,"trace" => true,"exceptions" => true, 'cache_wsdl' => WSDL_CACHE_BOTH);
       $callOptions = array_merge($defaultOptions, $options);
 
