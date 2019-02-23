@@ -25,7 +25,7 @@ class RpPartnerService extends \SoapClient
      * @access public
      * Location of wsdl: https://amsel.dpwn.net/abholportal/gw/lp/schema/1.0/var3ws.wsdl
      */
-    public function __construct(array $options = array(), $username, $password, $wsdl)
+    public function __construct(array $options = array(),string $username,string $password,string $wsdl = null)
     {
       if($wsdl == null) 
       {
